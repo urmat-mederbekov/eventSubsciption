@@ -1,13 +1,14 @@
 package kg.attractor.eventsubscription.dto;
 
 import kg.attractor.eventsubscription.model.Event;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Data
-@Builder
+@Builder(access = AccessLevel.PRIVATE)
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class EventDTO {
     public static EventDTO from(Event event){
         return builder()

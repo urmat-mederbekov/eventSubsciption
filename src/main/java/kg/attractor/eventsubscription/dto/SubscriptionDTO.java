@@ -2,12 +2,13 @@ package kg.attractor.eventsubscription.dto;
 
 import kg.attractor.eventsubscription.model.Event;
 import kg.attractor.eventsubscription.model.Subscription;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Builder
+@Builder(access = AccessLevel.PRIVATE)
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @Data
 public class SubscriptionDTO {
     public static SubscriptionDTO from(Subscription subscription){
